@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conversor de HTML para PDF</title>
+<meta name="description" content="Baixe um arquivo .bat para Windows que converte todos os arquivos HTML de uma pasta em PDF, de uma só vez.">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #1b2330;
+    --muted: #5b6678;
+    --border: #e1e5eb;
+    --accent: #1f5eff;
+    --accent-hover: #1749c9;
+    --accent-text: #ffffff;
+    --code-bg: #eef1f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f141b;
+      --card: #171e28;
+      --text: #e8ecf2;
+      --muted: #9aa6b8;
+      --border: #263040;
+      --accent: #4c85ff;
+      --accent-hover: #6b9aff;
+      --accent-text: #0b1220;
+      --code-bg: #1e2733;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 16px 64px;
+  }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 12px; }
+  h2 { font-size: 1.15rem; margin: 36px 0 12px; }
+  p { margin: 0 0 12px; }
+  .lead { color: var(--muted); font-size: 1.1rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-top: 28px;
+    text-align: center;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--accent-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 14px 28px;
+    border-radius: 10px;
+    transition: background .15s;
+  }
+  .btn:hover { background: var(--accent-hover); }
+  .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 12px 0 0; }
+  ol { padding-left: 1.3rem; margin: 0; }
+  ol li { margin-bottom: 10px; padding-left: 4px; }
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: .92em;
+  }
+  ul { padding-left: 1.3rem; margin: 0; }
+  ul li { margin-bottom: 8px; }
+  details {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { margin-top: 48px; color: var(--muted); font-size: .85rem; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Converta HTML em PDF com um clique</h1>
+
+  <div class="card">
+    <a class="btn" href="html_to_pdf.bat" download="html_to_pdf.bat">⬇ Baixar html_to_pdf.bat</a>
+    <p class="meta">Para Windows 10 e 11 · Arquivo pequeno · Sem instalação</p>
+  </div>
+
+  <h2>Como usar</h2>
+  <ol>
+    <li>Baixe o arquivo <code>html_to_pdf.bat</code> no botão acima.</li>
+    <li>Copie-o para a <strong>mesma pasta</strong> onde estão os arquivos HTML.</li>
+    <li>Dê <strong>dois cliques</strong> no arquivo <code>html_to_pdf.bat</code>.</li>
+    <li>Aguarde a conversão. Os PDFs aparecerão na pasta <code>pdfs</code>, criada automaticamente, com o mesmo nome dos originais.</li>
+  </ol>
+
+  <h2>Bom saber</h2>
+  <ul>
+    <li>Converte todos os arquivos <code>.html</code> e <code>.htm</code> da pasta.</li>
+    <li>Usa o Microsoft Edge (já incluído no Windows) ou o Google Chrome. Nada precisa ser instalado.</li>
+    <li>Se já existir um PDF com o mesmo nome na pasta <code>pdfs</code>, o novo arquivo é salvo como <code>nome (1).pdf</code>, <code>nome (2).pdf</code> e assim por diante. Nenhum PDF anterior é substituído.</li>
+    <li>Imagens e estilos que estejam em arquivos separados continuam funcionando se permanecerem ao lado do HTML.</li>
+    <li>Nomes de arquivo com ponto de exclamação (<code>!</code>) podem falhar. Se isso acontecer, renomeie o arquivo.</li>
+  </ul>
+
+  <h2>Dúvidas frequentes</h2>
+  <details>
+    <summary>O Windows mostrou um aviso de segurança. E agora?</summary>
+    <p>É comum o Windows alertar sobre arquivos .bat baixados da internet. Se aparecer "O Windows protegeu seu computador", clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>. O arquivo é um texto simples: você pode abri-lo no Bloco de Notas para conferir o que ele faz antes de usá-lo.</p>
+  </details>
+  <details>
+    <summary>O navegador bloqueou o download.</summary>
+    <p>Alguns navegadores pedem confirmação para arquivos .bat. Escolha <strong>Manter</strong> ou <strong>Fazer download mesmo assim</strong>.</p>
+  </details>
+  <details>
+    <summary>Meus arquivos não foram convertidos.</summary>
+    <p>Confirme que o <code>.bat</code> está na mesma pasta dos arquivos HTML e que o Edge ou o Chrome está instalado. Páginas que carregam conteúdo da internet precisam de conexão ativa durante a conversão.</p>
+  </details>
+  <details>
+    <summary>Meus arquivos são enviados para algum lugar?</summary>
+    <p>Não. Toda a conversão acontece no seu computador, usando o navegador instalado nele.</p>
+  </details>
+
+  <footer>Ferramenta simples para uso interno.</footer>
+</main>
+</body>
+</html>
